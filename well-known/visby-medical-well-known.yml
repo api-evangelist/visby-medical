@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://visby.com/.well-known/*
+host: https://visby.com
+note: >-
+  visby.com is a Shopify-hosted consumer storefront. The openid-configuration
+  and oauth-authorization-server documents are Shopify's customer-account
+  identity endpoints (issuer https://shopify.com/authentication/68784849052),
+  not a first-party Visby Medical developer API. Captured verbatim as they are
+  genuinely served on the provider's domain.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: visby-medical-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: visby-medical-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

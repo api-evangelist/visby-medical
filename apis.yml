@@ -1,8 +1,30 @@
 aid: visby-medical
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/visby-medical.png
 name: Visby Medical
-description: 'Visby Medical is a company surfaced as a portfolio company of amplify-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: digital-biology. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Visby Medical is a molecular diagnostics company that has miniaturized the
+  gold-standard PCR laboratory onto a single-use, palm-sized point-of-care
+  device, delivering lab-quality results in about 30 minutes without any
+  instrument, sample transport, or lab infrastructure. Its consumer offering
+  (sold direct at visby.com) is an FDA-authorized at-home women's sexual health
+  test that detects Chlamydia, Gonorrhea, and Trichomoniasis, paired with
+  same-day telehealth consultation on a positive result. Visby also builds
+  point-of-care PCR platforms for clinical and respiratory pathogen testing.
+  The company is backed by venture investors including Amplify Partners. This
+  API Evangelist profile tracks Visby Medical as a company; the business is a
+  hardware diagnostics and direct-to-consumer commerce operation and does not
+  publish a first-party developer API, SDK, or developer portal at this time.
 url: https://raw.githubusercontent.com/api-evangelist/visby-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +34,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Digital Biology
+- Diagnostics
+- Molecular Diagnostics
+- PCR
+- Point of Care
+- Healthcare
+- Sexual Health
+- Medical Devices
+- Telehealth
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +54,25 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://visbymedical.com
+  url: https://visby.com
+- type: Support
+  url: https://visby.com/pages/contact-us
+- type: HelpCenter
+  url: https://visby.com/pages/faqs
+- type: Blog
+  url: https://visby.com/blogs/health
+- type: Pricing
+  url: https://visby.com/products/visby-womens-at-home-sti-test-kit
+- type: PrivacyPolicy
+  url: https://visby.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://visby.com/policies/terms-of-service
+- type: DomainSecurity
+  url: security/visby-medical-domain-security.yml
+- type: WellKnown
+  url: well-known/visby-medical-well-known.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
