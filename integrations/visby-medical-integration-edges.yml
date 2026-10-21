@@ -1,0 +1,125 @@
+edges:
+- partner_name: FDA 510(k) premarket notifications (IVD / surgical panels)
+  partner: null
+  partner_match: register-name
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253971
+  category: FDA-cleared IVD / surgical device
+  contract_reference:
+    register: openFDA device/510k (decision_date >= 2016-01-01; panels CH HE IM MI PA TX SU OR)
+    standard: FDA 510(k) premarket clearance (IVD / surgical panels)
+    spec_file: null
+    role: fda-510k-holder
+    registered_name: Visby Medical, Inc.
+    matched_domain: null
+    matched_by: register-name
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: K253971
+    certified_products:
+    - product: FDA 510(k) clearance, Microbiology panel
+      product_type: Microbiology
+      review_panel: MI
+      lapsed: false
+      latest_decision: '2026-05-27'
+      devices_sample:
+      - Visby Medical Flu and COVID-19 Test
+      - Visby Medical Men's Sexual Health Test
+      - Visby Medical Respiratory Health Test
+      - Visby Medical Sexual Health
+      - Visby Medical Sexual Health Test
+    signal_note: certified_products = one entry per FDA review PANEL held, never per device; openFDA carries decisions,
+      not withdrawals, so lapsed is always false
+    register_name_note: register-name 'visbymedical' = visby-medical; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA establishment registration and device listing (IVD / surgical specialties)
+  partner: null
+  partner_match: register-name
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRL/rl.cfm
+  category: FDA-registered device establishment
+  contract_reference:
+    register: openFDA device/registrationlisting (owner/operator, device listings by medical specialty)
+    standard: FDA establishment registration and device listing (21 CFR 807)
+    spec_file: null
+    role: fda-registered-owner-operator
+    registered_name: Visby Medical, Inc.
+    matched_domain: null
+    matched_by: register-name
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    listed_specialties:
+    - Immunology
+    - Microbiology
+    signal_note: 'REGULATED through the establishment registration: a registration is not a clearance, so no certified_products;
+      specialties are context, never counted'
+    register_name_note: register-name 'visbymedical' = visby-medical; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA CLIA test categorizations
+  partner: null
+  partner_match: register-name
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfClia/search.cfm
+  category: CLIA-categorized test system maker
+  contract_reference:
+    register: FDA CLIA test categorization database (clia_detail.zip)
+    standard: FDA CLIA categorization
+    spec_file: null
+    role: clia-categorized-test-system-maker
+    registered_name: Visby Medical, Inc.
+    matched_domain: null
+    matched_by: register-name
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: CR250719
+    certified_products:
+    - product: FDA CLIA categorization, waived complexity
+      product_type: waived
+      lapsed: false
+      latest_effective: 2026/06/02
+      test_systems_sample:
+      - Visby Medical, Inc., Visby Medical Flu and COVID-19 Test
+      - Visby Medical, Inc., Visby Medical Men's Sexual Health Test
+      - Visby Medical, Inc., Visby Medical Respiratory Health Test
+      - Visby Medical, Inc., Visby Medical Sexual Health Test
+    signal_note: 'certified_products = one entry per CLIA COMPLEXITY held (waived / moderate / high), never per
+      test system; the database lists categorizations, not withdrawals: lapsed false'
+    register_name_note: register-name 'visbymedical' = visby-medical; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.advamed.org/advameddx/members/
+checked:
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://www.advamed.org/advameddx/members/
